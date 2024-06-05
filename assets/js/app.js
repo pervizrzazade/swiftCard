@@ -8,6 +8,7 @@ const wishlistCounter = document.querySelector(".wishlist__counter .count");
 const shopCounter = document.querySelector(".shop__counter .count");
 const cardClose = document.querySelectorAll(".close__btn");
 const totalPrice = document.querySelector(".total__price span");
+const confirmCart = document.querySelector(".confirm-cart")
 let addToCard = [];
 let addToWishlist = [];
 let data = [];
@@ -17,7 +18,8 @@ let wishlistItem =  localStorage.wishlistData != undefined
     : [];
 export const getData = async () => {
   try {
-    data = await fetch("http:/products/product.JSON").then((res) => res.json());
+    data = await fetch("../../products/product.JSON").then((res) => res.json());
+    
     return data;
   } catch (error) {
     console.log("Err: " + error);
@@ -46,6 +48,13 @@ cardClose.forEach((btn) => {
     body.classList.remove("activeFav");
   });
 });
+
+console.log(confirmCart)
+confirmCart.addEventListener("click",()=>{
+  let checkUser = localStorage.getItem("userData")
+  console.log(checkUser)
+})
+
 
 export function setAddToCartHandler() {
   addToCard = document.querySelectorAll(".CartBtn");
