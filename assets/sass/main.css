@@ -294,6 +294,63 @@ header {
   }
 }
 
+.dropdown {
+  cursor: pointer;
+  position: relative;
+}
+.dropdown .profile__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown .profile__info i {
+  background-color: #db4444;
+  padding: 10px;
+  border-radius: 50%;
+  color: #fff;
+  margin: 0 10px 0 0;
+}
+.dropdown .dropdown__items {
+  position: absolute;
+  top: 58px;
+  opacity: 0;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  right: -50px;
+  justify-content: space-between;
+  border: 1px solid #ffd000;
+  width: 140px;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+.dropdown .dropdown__items li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  padding: 8px 6px;
+}
+.dropdown .dropdown__items li:hover {
+  background-color: #ccc;
+}
+.dropdown .dropdown__items li i {
+  margin: 0 8px 0 0;
+}
+.dropdown.active .dropdown__items {
+  opacity: 1;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  right: -50px;
+  justify-content: space-between;
+}
+
 .sec-title {
   margin: 100px 0 0 20px;
   font-size: 2.5rem;
@@ -1883,56 +1940,6 @@ footer a {
 }
 .products .product__wrp .product__box .product__content .prices .disc-price {
   color: #db4444;
-}
-
-.dropdown {
-  cursor: pointer;
-  position: relative;
-}
-.dropdown > i {
-  background-color: #db4444;
-  padding: 10px;
-  border-radius: 50%;
-  color: #fff;
-}
-.dropdown .dashboard__select__items {
-  position: absolute;
-  top: 58px;
-  opacity: 0;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  right: -50px;
-  justify-content: space-between;
-  border: 1px solid #ffd000;
-  width: 140px;
-  height: -moz-max-content;
-  height: max-content;
-  background-color: #F5F5F5;
-  border-radius: 5px;
-  transition: all 0.5s ease;
-}
-.dropdown .dashboard__select__items li {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.3s ease-in-out;
-  padding: 8px 6px;
-}
-.dropdown .dashboard__select__items li:hover {
-  background-color: #ccc;
-}
-.dropdown .dashboard__select__items li i {
-  margin: 0 8px 0 0;
-}
-.dropdown.active > ul {
-  opacity: 1;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  right: -50px;
-  justify-content: space-between;
 }
 
 .first-section {

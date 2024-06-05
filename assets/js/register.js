@@ -54,14 +54,22 @@ console.log(register);
 function areAllValuesPresent(obj) {
   return Object.values(obj).every((value) => value);
 }
-function setUserData() {
+async function setUserData() {
   const userData = {
     name: valueName,
     email: valueEmail,
     pass: valuePass,
   };
   if (areAllValuesPresent(userData)) {
-    localStorage.setItem("userData", JSON.stringify(userData));
+
+    await fetch('https://66604a0e5425580055b32ea2.mockapi.io/users', {
+      method: 'POST',
+        headers: {'content-type':'application/json'},
+        body: JSON.stringify(userData)
+    })
+
+    alert('Siz qeydiyyatdan kecdiz!')
+
     window.location.pathname = "/login.html";
   }
 }

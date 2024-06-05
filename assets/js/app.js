@@ -6,28 +6,69 @@ const shopIcon = document.querySelector(".shopping__icon");
 const wishlistIcon = document.querySelector(".wishlist__icon");
 const wishlistCounter = document.querySelector(".wishlist__counter .count");
 const shopCounter = document.querySelector(".shop__counter .count");
+//User
+const dropDown = document.querySelector(".dropdown");
+const dropdownItems = document.querySelector(".dropdown__items");
+let logOut = null;
+const userNameDisplay = document.querySelector(".user__name");
+const registered = `<ul class="registered">
+    <li class="profile">Profile <i class="fa-regular fa-user"></i></a></li>
+    <li class="log-out"> Log Out <i class="fa-solid fa-power-off"></i></li>
+    </ul>`;
+const guest = ` <ul class="guest">
+    <li><a href="./login.html">Login</a></li>
+    <li><a href="./signup.html">Register</a></li>
+    </ul>`;
+//***** */
 const cardClose = document.querySelectorAll(".close__btn");
 const totalPrice = document.querySelector(".total__price span");
-const confirmCart = document.querySelector(".confirm-cart")
+const confirmCart = document.querySelector(".confirm-cart");
 let addToCard = [];
 let addToWishlist = [];
 let data = [];
-let cartItems =  localStorage.cardData != undefined ? JSON.parse(localStorage.cardData) : [];
-let wishlistItem =  localStorage.wishlistData != undefined
+let cartItems =
+  localStorage.cardData != undefined ? JSON.parse(localStorage.cardData) : [];
+let wishlistItem =
+  localStorage.wishlistData != undefined
     ? JSON.parse(localStorage.wishlistData)
     : [];
+
+
+//User tools functions
+
+setUserDropdowTools();
+function setUserDropdowTools() {
+  let auth = Boolean(localStorage.userName);
+  dropdownItems.innerHTML = auth ? registered : guest ;
+  logOut = auth ? document.querySelector(".log-out") : null;
+  if(auth) logOut.onclick = setLogoutHandler;
+  userNameDisplay.textContent = auth ? localStorage.userName : "Guest";
+}
+
+dropDown.addEventListener("click", () => {
+  dropDown.classList.toggle("active");
+});
+
+
+function setLogoutHandler() {
+  localStorage.removeItem('userName');
+  setUserDropdowTools();
+  console.log("log out");
+}
+
+
+//User tools functions -END-
+
 export const getData = async () => {
   try {
     data = await fetch("../../products/product.JSON").then((res) => res.json());
-    
+
     return data;
   } catch (error) {
     console.log("Err: " + error);
   }
 };
 getData();
-
-
 
 shopIcon.addEventListener("click", () => {
   body.classList.toggle("activeCard");
@@ -49,12 +90,16 @@ cardClose.forEach((btn) => {
   });
 });
 
-console.log(confirmCart)
-confirmCart.addEventListener("click",()=>{
-  let checkUser = localStorage.getItem("userData")
-  console.log(checkUser)
-})
 
+confirmCart?.addEventListener("click", () => {
+  let checkUser = localStorage.getItem("userName");
+  console.log(checkUser);
+  if (checkUser) {
+    window.location.pathname = "/signup.html";
+  } else {
+    alert("Your cart has been confirmed");
+  }
+});
 
 export function setAddToCartHandler() {
   addToCard = document.querySelectorAll(".CartBtn");
@@ -142,11 +187,12 @@ export function discountCalc(discount, price) {
   return parseInt(price - (price * discount) / 100);
 }
 
-showCardItems(cartItems);
+
 
 function showCardItems(cartItems) {
   cardList.innerHTML = cartItems.length
-    ? cartItems.map((product) => {
+    ? cartItems
+        .map((product) => {
           return `
   <li class="cart__item">
     <h3>${product.prodName}</h3>
@@ -168,7 +214,8 @@ function showCardItems(cartItems) {
         .join("")
     : '<li class="empty">Empty Cart</li>';
 
-  document.querySelectorAll(".card__list  .cart__item")
+  document
+    .querySelectorAll(".card__list  .cart__item")
     .forEach((item, index) => {
       let btns = item.querySelectorAll("button");
       let trash = item.querySelector(".trash");
@@ -212,6 +259,7 @@ function changePriceHandler(quantity, index) {
   localStorage.setItem("cardData", JSON.stringify(cartItems));
   showCardItems(cartItems);
 }
+showCardItems(cartItems);
 
 showWishlistItems(wishlistItem);
 
@@ -283,4 +331,3 @@ function checkItemsState() {
     } else elem.checked = false;
   });
 }
-

@@ -36,12 +36,19 @@ passwordLogin.addEventListener("input", () => {
     : passwordLogin.classList.remove("fill");
 });
 
-login.addEventListener("click", (e) => {
+login.addEventListener("click", async (e) => {
   e.preventDefault();
-  if (
-    valueEmail == JSON.parse(localStorage.userData).email &&
-    valuePass == JSON.parse(localStorage.userData).pass
-  ) {
-    window.location.pathname = "/home.html";
-  }
+  let users = await fetch('https://66604a0e5425580055b32ea2.mockapi.io/users').then(res => res.json());
+  let error = true;
+  users.forEach(user => {
+    if(valueEmail == user.email && valuePass == user.pass) {
+      error = false;
+      localStorage.setItem('userName', user.name);
+      window.location.pathname = "/index.html";
+    }
+  });
+
+  if(error) alert('email ve ya parol yanlishdir')
+
+  
 });
