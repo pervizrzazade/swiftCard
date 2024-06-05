@@ -1,0 +1,394 @@
+{
+  "allItems": {
+    "notebooks": [
+      {
+        "id": 1,
+        "prodName": "Notbuk Acer Predator Helios Neo 18 PHN18-71-73N2",
+        "price": 3890,
+        "img": "../assets/images/allItems/notebooks/img1.webp",
+        "discount": 12
+      },
+      {
+        "id": 2,
+        "prodName": "HP Spectre x360 Laptop 14-ef 0018ci 7N7N0EA",
+        "price": 3780,
+        "img": "../assets/images/allItems/notebooks/img2.webp",
+        "discount": 12
+      },
+      {
+        "id": 3,
+        "prodName": "HP ENVY x360 Laptop 15-ew0002ci 6G6M9EA",
+        "price": 2666,
+        "img": "../assets/images/allItems/notebooks/img3.webp",
+        "discount": 12
+      },
+      {
+        "id": 4,
+        "prodName": "HP ENVY Laptop 16 -h0002ci 6Y9S7EA",
+        "price": 2734,
+        "img": "../assets/images/allItems/notebooks/img4.webp",
+        "discount": 12        
+      },
+      {
+        "id": 5,
+        "prodName": "MSI Katana 15 B13VFK-1439XAZ 9S7-158571-1439",
+        "price": 2200,
+        "img": "../assets/images/allItems/notebooks/img5.webp",
+        "discount": 12
+      },
+      {
+        "id": 6,
+        "prodName": "ASUS ROG Strix SCAR 18 G834JZR-N6019 90NR0IN2",
+        "price": 3076,
+        "img": "../assets/images/allItems/notebooks/img6.webp",
+        "discount": 12
+      },
+      {
+        "id": 7,
+        "prodName": "ASUS ROG Strix SCAR 18 G834JZR-N6019 90NR0IN2d",
+        "price": 6747,
+        "img": "../assets/images/allItems/notebooks/img7.webp",
+        "discount": 12
+      },
+      {
+        "id": 8,
+        "prodName": "ASUS TUF Gaming F16 FX607JV-N3144 90NR0HV6",
+        "price": 2962,
+        "img": "../assets/images/allItems/notebooks/img8.webp",
+        "discount": 12
+      },
+      {
+        "id": 9,
+        "prodName": "MSI Thin 15 B12VE-1809XAZ 9S7-16R831-1809",
+        "price": 3060,
+        "img": "../assets/images/allItems/notebooks/img9.webp",
+        "discount": 12
+      }
+    ],
+    "pComp": [
+      {
+        "id": 1,
+        "prodName": "HP 24-cb 1095ci All-in-One PC 7N7P4EA",
+        "price": 2278,
+        "img": "../assets/images/allItems/pComp/img1.webp",
+        "discount": 12
+      },
+      {
+        "id": 2,
+        "prodName": "HP ENVY All-in-One 27-cp0002ci PC 6C8W4EA",
+        "price": 3760,
+        "img": "../assets/images/allItems/pComp/img2.webp",
+        "discount": 12
+      },
+      {
+        "id": 3,
+        "prodName": "HP Pav 24-ca1062ci AiO PC 6C8H3EA",
+        "price": 2060,
+        "img": "../assets/images/allItems/pComp/img3.webp",
+        "discount": 12
+      },
+      {
+        "id": 4,
+        "prodName": "HP ENVY TE02-0001ci OF PC 6C9J2EA",
+        "price": 2734,
+        "img": "../assets/images/allItems/pComp/img4.webp",
+        "discount": 12
+      },
+      {
+        "id": 5,
+        "prodName": "HP Pro Tower 400 G9 i7 - 12700 16GB/512PC",
+        "price": 2060,
+        "img": "../assets/images/allItems/pComp/img5.webp",
+        "discount": 12
+      },
+      {
+        "id": 6,
+        "prodName": "HP Pro Tower 290 G9 i7 12700 8GB/512 PC",
+        "price": 1350,
+        "img": "../assets/images/allItems/pComp/img6.webp",
+        "discount": 12
+      },
+      {
+        "id": 7,
+        "prodName": "HP 295 G8 MT R5 5600G 8GB/1TB PC 47M55EA",
+        "price": 1270,
+        "img": "../assets/images/allItems/pComp/img7.webp",
+        "discount": 12
+      },
+      {
+        "id": 8,
+        "prodName": "Monoblok HP ProOne 240 G10 Desktop PC (935X4EA)",
+        "price": 1526,
+        "img": "../assets/images/allItems/pComp/img8.webp",
+        "discount": 12
+      },
+      {
+        "id": 9,
+        "prodName": "Gaming & Design PC i7-12700|16 GB|SSD 1TB|RTX",
+        "price": 2399,
+        "img": "../assets/images/allItems/pComp/img9.webp",
+        "discount": 12
+      }
+    ],
+    "monitors": [
+      {
+        "id":1,
+        "prodName":"Monitor ViewSonic VA2732-H 100Hz/1ms",
+        "price":375,
+        "img":"../assets/images/allItems/monitors/img1.webp",
+        "discount":12
+      },
+      {
+        "id":2,
+        "prodName":"Monitor ViewSonic VA2432-H 100 Hz/1 ms",
+        "price":315,
+        "img":"../assets/images/allItems/monitors/img2.webp",
+        "discount":15
+      },
+      {
+        "id":3,
+        "prodName":"Curved monitor 27 2E Gaming G2723BV 2E",
+        "price":565,
+        "img":"../assets/images/allItems/monitors/img3.webp",
+        "discount":15
+      },
+      {
+        "id":4,
+        "prodName":"Monitor Acer 21.5 EK221QHbi",
+        "price":245,
+        "img":"../assets/images/allItems/monitors/img4.webp",
+        "discount":27
+      },
+      {
+        "id":5,
+        "prodName":"Gaming Monitor LENOVO LEGION Y27f-30",
+        "price":799,
+        "img":"../assets/images/allItems/monitors/img5.webp",
+        "discount":21
+      },
+      {
+        "id":6,
+        "prodName":"Gaming Monitor LENOVO LEGION Y27qf-30",
+        "price":1199,
+        "img":"../assets/images/allItems/monitors/img6.webp",
+        "discount":25
+      },
+      {
+        "id":7,
+        "prodName":"Monitor ASUS ROG Swift PG279QM 90LM0235",
+        "price":1999,
+        "img":"../assets/images/allItems/monitors/img7.webp",
+        "discount":15
+      },
+      {
+        "id":8,
+        "prodName":"Philips Gaming 27M1N3200ZA 27 FHD",
+        "price":549,
+        "img":"../assets/images/allItems/monitors/img8.webp",
+        "discount":16
+      },
+      {
+        "id":9,
+        "prodName":"Monitor Dell P2722H (210-AZYZ)",
+        "price":570,
+        "img":"../assets/images/allItems/monitors/img9.webp",
+        "discount":13
+      }
+    ],
+    "printers": [
+      {
+        "id":1,
+        "prodName":"Printer HP Color LaserJet Pro MFP 4303fdw (5HH67A)",
+        "price":1458,
+        "img":"../assets/images/allItems/printers/img1.webp",
+        "discount":12
+      },
+      {
+        "id":2,
+        "prodName":"Printer HP Color LaserJet Pro MFP 4303fdn (5HH66A)",
+        "price":1430,
+        "img":"../assets/images/allItems/printers/img2.webp",
+        "discount":15
+      },
+      {
+        "id":3,
+        "prodName":"HP LaserJet Pro MFP 3103fdw Printer (3G632A)",
+        "price":741,
+        "img":"../assets/images/allItems/printers/img3.webp",
+        "discount":13
+      },
+      {
+        "id":4,
+        "prodName":"Canon Laser Printer i-SENSYS X C1333i",
+        "price":1356,
+        "img":"../assets/images/allItems/printers/img4.webp",
+        "discount":12
+      },
+      {
+        "id":5,
+        "prodName":"Canon Laser Printer i-SENSYS X C1127iF",
+        "price":1822,
+        "img":"../assets/images/allItems/printers/img5.webp",
+        "discount":13
+      },
+      {
+        "id":6,
+        "prodName":"Canon Laser Printer i-SENSYS X C1127",
+        "price":1316,
+        "img":"../assets/images/allItems/printers/img6.webp",
+        "discount":12
+      },
+      {
+        "id":7,
+        "prodName":"Canon Laser Printer i-SENSYS MF657CDW",
+        "price":920,
+        "img":"../assets/images/allItems/printers/img7.webp",
+        "discount":13
+      },
+      {
+        "id":8,
+        "prodName":"Canon Laser Printer i-SENSYS MF463DW",
+        "price":1105,
+        "img":"../assets/images/allItems/printers/img8.webp",
+        "discount":10
+      },
+      {
+        "id":9,
+        "prodName":"Printer HP Color LaserJet Pro MFP 4303fdw (5HH67A1)",
+        "price":4047,
+        "img":"../assets/images/allItems/printers/img9.webp",
+        "discount":15
+      }
+    ],
+    "phones":[
+      {
+        "id":1,
+        "prodName":"Apple iPad Pro 12.9 (6th Gen) Wi-Fi 512GB Space",
+        "price":3599,
+        "img":"../assets/images/allItems/phones/img1.webp",
+        "discount":14
+      },
+      {
+        "id":2,
+        "prodName":"Tablet Samsung Galaxy Tab A7 Lite Gray (SM-T225N",
+        "price":349,
+        "img":"../assets/images/allItems/phones/img2.webp",
+        "discount":14
+      },
+      {
+        "id":3,
+        "prodName":"Planşet Lenovo TB-7504F/ 7' 1280x720/ Quad Core",
+        "price":249,
+        "img":"../assets/images/allItems/phones/img3.webp",
+        "discount":24
+      },
+      {
+        "id":4,
+        "prodName":"Tablet Lenovo TAB TB-X104L LTE ZA4C0026RU-N",
+        "price":444,
+        "img":"../assets/images/allItems/phones/img4.webp",
+        "discount":19
+      },
+      {
+        "id":5,
+        "prodName":"ASUS Zenfone 4 Max (ZC554KL)",
+        "price":599,
+        "img":"../assets/images/allItems/phones/img5.webp",
+        "discount":14
+      },
+      {
+        "id":6,
+        "prodName":"Tablet Lenovo TB-7304F (ZA300173RU-N)",
+        "price":165,
+        "img":"../assets/images/allItems/phones/img6.webp",
+        "discount":3
+      },
+      {
+        "id":7,
+        "prodName":"Tablet Lenovo Tab4 3G/TB-7304I (ZA310043EU-N)",
+        "price":235,
+        "img":"../assets/images/allItems/phones//img7.webp",
+        "discount":2
+      },
+      {
+        "id":8,
+        "prodName":"Tablet Lenovo TB-7104I (ZA410026RU-N)",
+        "price":183,
+        "img":"../assets/images/allItems/phones/img8.webp",
+        "discount":4
+      },
+      {
+        "id":9,
+        "prodName":"Tablet Lenovo TAB M10 X505F (ZA4G0021RU-N)",
+        "price":369,
+        "img":"../assets/images/allItems/phones/img9.webp",
+        "discount":6
+      }
+    ],
+    "speakers":[
+      {
+        "id":1,
+        "prodName":"Enhance Your Music Experience",
+        "price":100,
+        "img":"../assets/images/allItems/speakers/img1.webp",
+        "discount":14
+      },
+      {
+        "id":2,
+        "prodName":"Multimedia speaker and PES 3",
+        "price":100,
+        "img":"../assets/images/allItems/speakers/img2.webp",
+        "discount":10
+      },
+      {
+        "id":3,
+        "prodName":"Amazon Brend speasker",
+        "price":450,
+        "img":"../assets/images/allItems/speakers/img3.webp",
+        "discount":15
+      },
+      {
+        "id":4,
+        "prodName":"2E Multimedia speaker PCS204, 2.0, USB, Silver",
+        "price":160,
+        "img":"../assets/images/allItems/speakers/img4.webp",
+        "discount":12
+      },
+      {
+        "id":5,
+        "prodName":"Defender SPK-170",
+        "price":118,
+        "img":"../assets/images/allItems/speakers/img5.webp",
+        "discount":20
+      },
+      {
+        "id":6,
+        "prodName":"White Shark RHYTHMUS 2.0 GSP-602",
+        "price":260,
+        "img":"../assets/images/allItems/speakers/img6.webp",
+        "discount":30
+      },
+      {
+        "id":7,
+        "prodName":"2E Personal Computer Speaker PCS201, 2.0, USB",
+        "price":220,
+        "img":"../assets/images/allItems/speakers/img7.webp",
+        "discount":14
+      },
+      {
+        "id":8,
+        "prodName":"Səs qurğusu 2E SG300 Black (2E-SG300B)",
+        "price":170,
+        "img":"../assets/images/allItems/speakers/img8.webp",
+        "discount":18
+      },
+      {
+        "id":9,
+        "prodName":"White Shark MOOD 2.2 GSP-968 White",
+        "price":120,
+        "img":"../assets/images/allItems/speakers/img4.webp",
+        "discount":23
+      }
+    ]
+  }
+}

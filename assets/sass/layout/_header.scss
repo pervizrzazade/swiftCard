@@ -1,0 +1,227 @@
+header {
+  transition: all 0.5s ease-in-out;
+  background-color: #fff;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  position: sticky;
+  box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.5)
+}
+
+.navbar {
+  @include flex(row, space-between, center);
+  padding: 15px 60px;
+
+  @include tablet {
+    padding: 15px 30px;
+  }
+
+  @include mobile {
+    @include flex(row, space-between, center);
+    padding: 15px 10px;
+  }
+
+  .nav__left {
+    .logo {
+      img {
+        width: 300px;
+        transform: matrix3d(360deg);
+
+        @include tablet {
+          width: 250px;
+        }
+
+        @include mobile {
+          width: 160px;
+        }
+      }
+    }
+  }
+
+  .nav__center {
+    @include tablet {
+      position: fixed;
+      transition: all 0.5s ease-in-out;
+      right: 150%;
+      height: 100%;
+      width: 100%;
+      z-index: 998;
+      top: 0;
+      padding: 5px;
+    }
+
+    ul {
+      @include flex(row, center, center);
+      gap: 15px;
+
+      li {
+        transition: all 0.3s ease-in-out;
+        padding: 8px 0;
+        position: relative;
+
+        a {
+          display: inline-block;
+          color: map-get($colors, first);
+          @include font($size: 20px);
+          transition: all 0.3s ease-in-out;
+          white-space: nowrap;
+        }
+
+        &:hover {
+          a {
+            transform: translateY(-4px);
+            color: map-get($colors, second);
+          }
+        }
+
+
+
+        &::after {
+          content: "";
+          width: 0;
+          position: absolute;
+          height: 3px;
+          bottom: 0;
+          left: 0;
+          background-color: map-get($colors, second);
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+
+        &.active {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+
+      li.nav__right:hover::after,
+      li.active.nav__right::after {
+        display: none;
+      }
+    }
+  }
+
+  .nav__right {
+    @include flex(row, space-between, center);
+    gap: 40px;
+
+
+
+    @include tablet {
+      margin: 20px 0 0 0;
+      @include flex(column, space-between, center);
+
+      gap: 30px;
+    }
+
+    .wishlist__icon,
+    .shopping__icon {
+      position: relative;
+    }
+
+    i {
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      font-size: 25px;
+      color: #2b2a2a;
+    }
+
+    .wishlist__counter,
+    .shop__counter {
+      text-align: center;
+      position: absolute;
+      top: -22px;
+      left: 100%;
+      width: 25px;
+      height: 28px;
+      background-color: map-get($colors, second);
+      border-radius: 50%;
+      @include flex(row, center, center);
+
+      .count {
+        @include font(20px, 600);
+        color: map-get($colors, third);
+      }
+    }
+
+
+  }
+}
+
+.hamburger {
+  position: relative;
+  z-index: 999;
+  display: none;
+
+  @include tablet() {
+    display: inline-block;
+  }
+
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+
+  svg {
+    height: 3em;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .line {
+    fill: none;
+    stroke: map-get($colors, second);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+
+  input:checked+svg {
+    transform: rotate(-45deg);
+  }
+
+  input:checked+svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+}
+
+body.activeBurger {
+  @include tablet {
+    overflow: hidden;
+
+    .nav__center {
+      right: 0;
+      background: #fff;
+
+      ul {
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        gap: 5px;
+        flex-direction: column;
+
+        li {
+          transition: all 0.5s ease-in-out;
+
+          a {
+            color: map-get($colors, first);
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

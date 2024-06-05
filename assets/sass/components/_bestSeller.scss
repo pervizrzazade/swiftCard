@@ -1,0 +1,96 @@
+.best__seller {
+    margin: 150px 0 0 0;
+    .best__seller__content {
+        @include flex(row, space-around, center);
+        margin: 60px 0;
+        padding: 60px 10px;
+        background-color: #000;
+        @include tablet{
+            padding: 0 10px 30px 10px;
+            @include flex(row, center, center);
+            flex-wrap: wrap-reverse;
+        };
+
+        .best__seller__left {
+            @include flex(column, center, flex-start);
+            gap: 40px;
+            height: 100%;
+            color: #fff;
+            h3 {
+                @include font(30px, 600);
+                color: #00FF66;
+
+                @include mobile{
+                    @include font(25px, 600);
+
+                }
+            }
+
+            .best__seller__left__bottom {
+
+                h5 {
+                    @include font(45px, 600);
+                    color: #FAFAFA;
+                    margin: 0 0 20px 0;
+                    @include mobile{
+                        @include font(30px, 600);
+
+                    }
+                }
+
+                .prices {
+                    @include flex(row, start, center);
+                    gap: 20px;
+                    @include font (28px, 550);
+                    margin: 0 0 20px 0;
+                    @include mobile{
+                        @include font (20px, 550);
+
+                    }
+                    .first-price {
+                        color: map-get($colors , second);
+                        text-decoration: line-through;
+                    }
+
+                    .disc-price {
+                        color: map-get($colors , fourth);
+                    }
+                }
+
+                button {
+                    background-color: #00FF66;
+
+                    @include tablet{
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+
+        .best__seller__right {
+            figure {
+                @include flex(column, center, center);
+                max-width: 568px;
+                height: 400px;
+                @include tablet{
+                    width: 100%;
+                    height: max-content;
+                }
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+
+                    @include tablet{
+                        width: 350px;
+                        height: auto;
+                    }
+                    @include mobile{
+                        width: 280px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

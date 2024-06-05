@@ -1,0 +1,128 @@
+footer {
+    @include flex(column, space-around, center);
+
+    padding: 50px 20px;
+    margin: 100px 0 0 0;
+    background-color: #000;
+
+    .footer__wrp {
+        width: 100%;
+        @include flex(row, start, start);
+        gap: 60px;
+        flex-wrap: wrap;
+
+        @include laptop{
+
+            @include flex(column, start, start);
+            gap: 40px;
+            padding: 0 10px ;
+
+        }
+
+        &>div{
+            @include tablet {
+                width: 100%;
+            }
+        }
+        .footer__link {
+            position: relative;
+            cursor: pointer;
+
+
+            &::after {
+                content: '';
+                transition: all .3s ease-in-out;
+                position: absolute;
+                bottom: -6px;
+                left: 0;
+                width: 0;
+                padding: 1px;
+                background-color: #ffffff00;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                    background-color: #fff;
+
+                }
+            }
+        }
+
+        ul {
+            @include flex (column, end, start);
+            gap: 15px;
+
+            h4 {
+                @include font(20px, 600);
+                margin: 0 0 20px 0;
+            }
+        }
+
+        .footer__inp {
+            position: relative;
+
+            input {
+                border-radius: 10px;
+                padding: 12px 10px;
+                background-color: #000;
+                outline: none;
+                border: 1px solid #fff;
+                color: #fff;
+            }
+
+            i {
+                cursor: pointer;
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                z-index: 2;
+            }
+        }
+
+        .footer__contact {
+            .download__app {
+                @include flex (row, center, center);
+                gap: 20px;
+
+                &>img {
+                    width: 76px;
+                }
+
+                .install__app {
+                    @include flex (column, center, center);
+                    gap: 5px;
+
+                    img {
+                        cursor: pointer;
+                        width: 104px;
+                        height: 30px;
+                    }
+
+                }
+            }
+
+            .links {
+                @include flex(row, center, center);
+                gap: 8px;
+
+                a {
+                    transition: all .5s ease-in-out;
+                    border-radius: 50%;
+                    padding: 8px;
+                    border: 1px solid #ffffff00;
+
+                    &:hover {
+                        transform: translateY(-5px);
+                        border: 1px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    ul li,
+    a {
+        color: #fff;
+    }
+}

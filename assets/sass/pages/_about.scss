@@ -1,0 +1,107 @@
+.first-section {
+    padding: 60px;
+    @include flex(row, center, center);
+    gap: 20px;
+    @include laptop {
+        flex-direction: column;
+    }
+    @include tablet{
+        padding: 60px 30px;
+
+    }
+    @include mobile{
+        padding: 30px 15px;
+
+    }
+    .first-section__left {
+        .title {
+            margin:0 0 20px 0 ;
+            @include font(50px, 600);
+
+            @include mobile{
+                @include font(40px, 600);
+            }
+        }
+        p{
+            margin:0 0 30px 0;
+
+            @include mobile{
+              margin: 0 0 15px 0;
+            }
+        }
+
+    }
+
+    img {
+      border-radius: 10px;
+        max-width: 500px;
+        min-width: 200px;
+        @include laptop{
+            width: 100%;
+        }
+    }
+}
+
+
+.counter_section {
+    @include flex (row,center,stretch);
+    flex-wrap: wrap;
+    position: relative;
+    gap: 10px;
+    padding: 43px 90px;
+    @include laptop{
+      padding: 30px 60px;
+    }
+    @include tablet{
+      padding: 30px 40px;
+    }
+    @include mobile{
+      padding: 30px 10px;
+    }
+  }
+  .counter_box {
+    @include flex (column,center,center);
+    min-width: 200px;
+    width: calc((100% - 30px) / 4);
+    gap: 10px;
+    padding: 20px 10px;
+    position: relative;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;    font-size: 16px;
+    border-radius: 0.5em;
+    @include mobile{
+      width: 200px !important;
+    }
+
+    &>span i {
+      border: none;
+      color: #ffffff;
+      font-size: 2em;
+      text-align: center;
+      padding: 10px;
+      background-color:#000 ;
+      border-radius: 50%;
+    }
+    &>:nth-child(1){
+      padding: 15px;
+      border-radius: 50%;
+      background-color: #545255;
+    }
+
+    span.counter_num {
+      color: #000000;
+      display: grid;
+      place-items: center;
+      font-weight: 600;
+      font-size: 2rem;
+    }
+    
+    span.counter_text {
+      margin: 8px 0 0 0;
+      color: #000000;
+      font-size: 1.2em;
+      text-align: center;
+      pad: 0.7em 0;
+      font-weight: 400;
+      line-height: 0;
+    }
+  }

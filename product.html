@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Css -->
+     <link rel="stylesheet" href="./assets/sass/main.css">
+     <!-- Font Aweasome-->
+     <script src="https://kit.fontawesome.com/57e127926e.js" crossorigin="anonymous"></script>
+     <!-- Font -->
+     <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+     <!-- Swiper Css -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+     <title>SwiftCart</title>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav__left">
+                <div class="logo"><a href="#"><img src="./assets/images/Logo.webp" alt=""></a></div>
+            </div>
+            <div class="nav__center">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li class="active"><a href="./product.html">Products</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li class="nav__right">
+                        <div class="wishlist__icon">
+                            <i class="fa-solid fa-heart"></i>
+                            <div class="wishlist__counter">
+                                <span class="count">0</span>
+                            </div>
+                        </div>
+                        <div class="shopping__icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="shop__counter">
+                                <span class="count">0</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <label class="hamburger">
+                <input type="checkbox">
+                <svg viewBox="0 0 32 32">
+                    <path class="line line-top-bottom"
+                        d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                    </path>
+                    <path class="line" d="M7 16 27 16"></path>
+                </svg>
+            </label>
+        </nav>
+    </header>
+
+
+    <main>
+
+
+        <section class="fav">
+            <ul class="fav__list">
+            </ul>
+            <div class="fav__bottom">
+                <div class="close__btn">
+                    <button>Close</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <ul class="card__list">
+            </ul>
+            <div class="card__bottom">
+                <div class="total__price"><span>0</span></div>
+                <div class="close__btn">
+                    <button>Close</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <h2 class="sec-title">Products</h2>
+            <div class="categories" >
+                <button class="category__box active" data-name="allItems">
+                    <span><svg viewBox="0 0 16 16" width="50px" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="#373737" stroke-width=".82858px" color="#000000"> <path d="M8.04 10.471 2.938 7.953l2.085-1.03-.932-.46-3.017 1.49L8.04 11.39l6.965-3.437-3.017-1.49-.93.46 2.084 1.03z" style="-inkscape-stroke:none" transform="matrix(1.1485 0 0 1.2471 -1.233 -1.917)"></path> <path d="M8.04 13.448 2.938 10.93 5.023 9.9l-.932-.46-3.017 1.49 6.966 3.437 6.965-3.437-3.017-1.49-.93.46 2.084 1.03z" style="-inkscape-stroke:none" transform="matrix(1.1485 0 0 1.2471 -1.233 -1.917)"></path> <path d="M8.04 1.537 1.074 4.974 8.04 8.41l6.965-3.437zm0 .919 5.102 2.518L8.04 7.492 2.938 4.974z" style="-inkscape-stroke:none" transform="matrix(1.1485 0 0 1.2471 -1.233 -1.917)"></path> </g> </g></svg></span>
+                    <h3>All</h3>
+                </button>
+                <button class="category__box" data-name="notebooks">
+                    <span><svg viewBox="0 0 24 24" width="50px" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21 16V7.2C21 6.0799 21 5.51984 20.782 5.09202C20.5903 4.71569 20.2843 4.40973 19.908 4.21799C19.4802 4 18.9201 4 17.8 4H6.2C5.07989 4 4.51984 4 4.09202 4.21799C3.71569 4.40973 3.40973 4.71569 3.21799 5.09202C3 5.51984 3 6.0799 3 7.2V16M4.66667 20H19.3333C19.9533 20 20.2633 20 20.5176 19.9319C21.2078 19.7469 21.7469 19.2078 21.9319 18.5176C22 18.2633 22 17.9533 22 17.3333C22 17.0233 22 16.8683 21.9659 16.7412C21.8735 16.3961 21.6039 16.1265 21.2588 16.0341C21.1317 16 20.9767 16 20.6667 16H3.33333C3.02334 16 2.86835 16 2.74118 16.0341C2.39609 16.1265 2.12654 16.3961 2.03407 16.7412C2 16.8683 2 17.0233 2 17.3333C2 17.9533 2 18.2633 2.06815 18.5176C2.25308 19.2078 2.79218 19.7469 3.48236 19.9319C3.73669 20 4.04669 20 4.66667 20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></span>
+                    <h3>Notebooks</h3>
+                </button>
+                <button class="category__box" data-name="monitors">
+                    <span><svg viewBox="0 0 24 24" width="50px" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 20.9995H9M9 20.9995H15M9 20.9995V17.3264M15 20.9995H17M15 20.9995L15 17.3264M3 6.59765V14.4021C3 15.0574 3 15.5759 3.02094 15.9922C3.05014 16.5728 3.12007 16.9548 3.2875 17.2323C3.55607 17.6775 3.9049 17.9516 4.40095 18.1073C4.93196 18.2741 5.75448 18.074 7.39952 17.6738C8.92238 17.3033 10.5977 16.9999 12 16.9999C13.4023 16.9999 15.0776 17.3033 16.6005 17.6738C18.2455 18.074 19.068 18.2741 19.599 18.1073C20.0951 17.9516 20.4439 17.6775 20.7125 17.2323C20.8799 16.9548 20.9499 16.5728 20.9791 15.9922C21 15.5759 21 15.0574 21 14.4021V6.59765C21 5.02859 21 4.24406 20.7125 3.7675C20.4439 3.32232 20.0951 3.04817 19.5991 2.89245C19.068 2.72574 18.2455 2.92584 16.6005 3.32602C15.0776 3.69649 13.4023 3.9999 12 3.9999C10.5977 3.9999 8.92238 3.69649 7.39952 3.32602C5.75448 2.92584 4.93196 2.72574 4.40095 2.89245C3.9049 3.04817 3.55607 3.32232 3.2875 3.7675C3 4.24406 3 5.02859 3 6.59765Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></span>
+                    <h3>Monitors</h3>
+                </button>
+                <button class="category__box" data-name="phones">
+                    <span><svg viewBox="0 0 24 24" width="50px" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 3V4.4C10 4.96005 10 5.24008 10.109 5.45399C10.2049 5.64215 10.3578 5.79513 10.546 5.89101C10.7599 6 11.0399 6 11.6 6H12.4C12.9601 6 13.2401 6 13.454 5.89101C13.6422 5.79513 13.7951 5.64215 13.891 5.45399C14 5.24008 14 4.96005 14 4.4V3M9.2 21H14.8C15.9201 21 16.4802 21 16.908 20.782C17.2843 20.5903 17.5903 20.2843 17.782 19.908C18 19.4802 18 18.9201 18 17.8V6.2C18 5.0799 18 4.51984 17.782 4.09202C17.5903 3.71569 17.2843 3.40973 16.908 3.21799C16.4802 3 15.9201 3 14.8 3H9.2C8.0799 3 7.51984 3 7.09202 3.21799C6.71569 3.40973 6.40973 3.71569 6.21799 4.09202C6 4.51984 6 5.07989 6 6.2V17.8C6 18.9201 6 19.4802 6.21799 19.908C6.40973 20.2843 6.71569 20.5903 7.09202 20.782C7.51984 21 8.07989 21 9.2 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></span>
+                    <h3>Phones</h3>
+                </button>
+                <button class="category__box" data-name="pComp">
+                    <span><svg fill="#000000" width="50px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 371.486 371.486" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M336.704,284.52H34.783c-15.366,0-27.862,12.502-27.862,27.862v31.243c0,15.366,12.496,27.861,27.862,27.861h301.921 c15.366,0,27.862-12.495,27.862-27.861v-31.243C364.566,297.021,352.07,284.52,336.704,284.52z M216.849,336.269H59.655v-14.934 h157.194V336.269z M316.312,340.25c-6.581,0-11.932-5.356-11.932-11.932c0-6.605,5.351-11.938,11.932-11.938 c6.605,0,11.938,5.332,11.938,11.938C328.255,334.894,322.929,340.25,316.312,340.25z"></path> </g> <g> <path d="M336.704,0H34.783C19.417,0,6.92,12.502,6.92,27.862v220.851c0,15.366,12.496,27.856,27.862,27.856h301.921 c15.366,0,27.862-12.49,27.862-27.856V27.868C364.566,12.502,352.07,0,336.704,0z M329.252,234.451H36.773V29.853h292.479 V234.451z"></path> </g> </g> </g> </g></svg></span>
+                    <h3>Personal Computer</h3>
+                </button>
+                <button class="category__box" data-name="printers">
+                    <span><svg fill="#000000" width="50px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>printer</title> <path d="M0 22.016q0 2.496 1.76 4.224t4.256 1.76v2.016q0 0.832 0.576 1.408t1.408 0.576h16q0.832 0 1.408-0.576t0.608-1.408v-2.016q2.464 0 4.224-1.76t1.76-4.224v-6.016q0-2.464-1.76-4.224t-4.224-1.76v-8q0-0.832-0.608-1.408t-1.408-0.608h-16q-0.832 0-1.408 0.608t-0.576 1.408v8q-2.496 0-4.256 1.76t-1.76 4.224v6.016zM4 24v-1.984q0-1.664 1.184-2.848t2.816-1.152h16q1.664 0 2.816 1.152t1.184 2.848v1.984h-1.984v-1.984q0-0.832-0.608-1.408t-1.408-0.608h-16q-0.832 0-1.408 0.608t-0.576 1.408v1.984h-2.016zM8 30.016v-8h16v8h-16zM8 10.016v-8h16v8h-1.984v-6.016h-12v6.016h-2.016zM12 10.016v-4h8v4h-8zM22.016 16v-1.984h1.984v1.984h-1.984zM26.016 16v-1.984h1.984v1.984h-1.984z"></path> </g></svg></span>
+                    <h3>Printers</h3>
+                </button>
+                <button class="category__box" data-name="speakers">
+                    <span><svg viewBox="0 0 24 24" width="50px" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M5.00265 5.571V18.429C4.94035 19.782 5.98301 20.931 7.33565 21H16.6687C18.0217 20.9315 19.0649 19.7823 19.0027 18.429V5.571C19.065 4.21803 18.0223 3.06901 16.6697 3H7.33565C5.98301 3.06901 4.94035 4.21803 5.00265 5.571Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5087 13.333C8.72372 14.5071 8.86389 16.0696 9.84527 17.0852C10.8267 18.1008 12.3835 18.2943 13.5837 17.55L13.6697 17.495C14.6657 16.8293 15.1702 15.6347 14.9527 14.4565C14.7353 13.2783 13.8378 12.3425 12.6697 12.076L12.5857 12.058C11.3954 11.8212 10.1798 12.3249 9.5057 13.334L9.5087 13.333Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7557 6.66702C10.3633 7.25413 10.4336 8.03536 10.9244 8.54303C11.4152 9.05069 12.1936 9.1473 12.7937 8.77502L12.8367 8.74702C13.3343 8.41403 13.5863 7.81694 13.4776 7.22807C13.3689 6.63921 12.9204 6.1714 12.3367 6.03802L12.2947 6.02902C11.6995 5.91062 11.0917 6.16244 10.7547 6.66702H10.7557Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></span>
+                    <h3>Speakers</h3>
+                </button>
+            </div>
+            <div class="product__wrp">
+                <div class="loader">
+                    <div class="box-load1"></div>
+                    <div class="box-load2"></div>
+                    <div class="box-load3"></div>
+                  </div>
+
+            </div>
+
+
+        </section>
+
+        <footer style="position: relative; z-index: 2;">
+            <div class="footer__wrp">
+                <ul class="exclusive">
+                    <li>
+                        <h4>Exclusive</h4>
+                    </li>
+                    <li class="footer__link"><a href="#">Subscribe</a></li>
+                    <li class="footer__link">Get 10% off your first order</li>
+                    <li class="footer__inp"><input type="email" name="" id="" placeholder="Enter your email"> <i
+                            class="fa-solid fa-paper-plane"></i></li>
+                </ul>
+                <ul class="support">
+                    <li>
+                        <h4>Support</h4>
+                    </li>
+                    <li class="footer__link">111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</li>
+                    <li class="footer__link">exclusive@gmail.com</li>
+                    <li class="footer__link">+88015-88888-9999</li>
+                </ul>
+                <ul class="account">
+                    <li>
+                        <h4>Account</h4>
+                    </li>
+                    <li class="footer__link">My Account</li>
+                    <li class="footer__link">Cart</li>
+                    <li class="footer__link">Wishlist</li>
+                    <li class="footer__link">Shop</li>
+                </ul>
+                <ul class="quick__link">
+                    <li>
+                        <h4>Quick Link</h4>
+                    </li>
+                    <li class="footer__link">Privacy Policy</li>
+                    <li class="footer__link">Terms Of Use</li>
+                    <li class="footer__link">FAQ</li>
+                    <li class="footer__link">Contact</li>
+                </ul>
+                <ul class="footer__contact">
+                    <li>
+                        <h4>Download App</h4>
+                    </li>
+                    <li>Save $3 with App New User Only</li>
+                    <li class="download__app">
+                        <img src="./assets/images/qrCode.jpeg" alt="qrCode">
+                        <div class="install__app">
+                            <div class="android">
+                                <img src="./assets/images/playstore.png" alt="">
+                            </div>
+                            <div class="ios">
+                                <img src="./assets/images/appstore.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="links">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="coopyright">
+                <p>&#169; Copyright Rimel 2024. All right reserved</p>
+            </div>
+
+        </footer>
+    </main>
+
+
+
+
+
+
+      <!-- Local js -->
+      <script type="module" src="./assets/js/app.js"></script>
+      <script type="module" src="./assets/js/product.js"></script>
+</body>
+</html>

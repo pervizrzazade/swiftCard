@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Scss -->
+    <link rel="stylesheet" href="./assets/sass/main.css">
+    <!-- Font Aweasome-->
+    <script src="https://kit.fontawesome.com/57e127926e.js" crossorigin="anonymous"></script>
+    <!-- Font -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+
+    <!--  Firebase Login -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script> -->
+
+    <title>SwiftCart</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav__left">
+                <div class="logo"><a href="#"><img src="./assets/images/Logo.webp" alt=""></a></div>
+            </div>
+            <div class="nav__center">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./product.html">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li class="active"><a href="./login.html">Login</a></li>
+                </ul>
+            </div>
+
+
+            <label class="hamburger">
+                <input type="checkbox">
+                <svg viewBox="0 0 32 32">
+                    <path class="line line-top-bottom"
+                        d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                    </path>
+                    <path class="line" d="M7 16 27 16"></path>
+                </svg>
+            </label>
+        </nav>
+    </header>
+
+
+
+
+    <main>
+        <section class="register">
+            <div class="form">
+                <div class="title">Create Account</div>
+                
+                <div class="input-container ic2">
+                    <input placeholder="" type="text" required class="input" id="registerName">
+                    <div class="cut cut-short"></div>
+                    <label class="iLabel" for="registerName">Name</label>
+                </div>
+                <div class="input-container ic2">
+                    <input placeholder="" type="email" required  class="input" id="registerEmail">
+                    <div class="cut cut-short"></div>
+                    <label class="iLabel" for="registerEmail">Email</label>
+                </div>
+                <div class="input-container ic2">
+                    <input placeholder="" type="password" required class="input" id="registerPassword">
+                    <div class="cut cut-short cut-pass"></div>
+                    <label class="iLabel" for="registerPassword">Password</label>
+                </div>
+                <button class="submit" type="button">Register</button>
+                <div class="login__page">
+                    <a href="./login.html" class="login__now">Already have an account?</a>
+                </div>
+            </div>
+
+        </section>
+
+
+        <footer style="position: relative; z-index: 2;">
+            <div class="footer__wrp">
+                <ul class="exclusive">
+                    <li>
+                        <h4>Exclusive</h4>
+                    </li>
+                    <li class="footer__link"><a href="#">Subscribe</a></li>
+                    <li class="footer__link">Get 10% off your first order</li>
+                    <li class="footer__inp"><input type="email" name="" id="" placeholder="Enter your email"> <i
+                            class="fa-solid fa-paper-plane"></i></li>
+                </ul>
+                <ul class="support">
+                    <li>
+                        <h4>Support</h4>
+                    </li>
+                    <li class="footer__link">111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</li>
+                    <li class="footer__link">exclusive@gmail.com</li>
+                    <li class="footer__link">+88015-88888-9999</li>
+                </ul>
+                <ul class="account">
+                    <li>
+                        <h4>Account</h4>
+                    </li>
+                    <li class="footer__link">My Account</li>
+                    <li class="footer__link">Cart</li>
+                    <li class="footer__link">Wishlist</li>
+                    <li class="footer__link">Shop</li>
+                </ul>
+                <ul class="quick__link">
+                    <li>
+                        <h4>Quick Link</h4>
+                    </li>
+                    <li class="footer__link">Privacy Policy</li>
+                    <li class="footer__link">Terms Of Use</li>
+                    <li class="footer__link">FAQ</li>
+                    <li class="footer__link">Contact</li>
+                </ul>
+                <ul class="footer__contact">
+                    <li>
+                        <h4>Download App</h4>
+                    </li>
+                    <li>Save $3 with App New User Only</li>
+                    <li class="download__app">
+                        <img src="./assets/images/qrCode.jpeg" alt="qrCode">
+                        <div class="install__app">
+                            <div class="android">
+                                <img src="./assets/images/playstore.png" alt="">
+                            </div>
+                            <div class="ios">
+                                <img src="./assets/images/appstore.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="links">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="coopyright">
+                <p>&#169; Copyright Rimel 2024. All right reserved</p>
+            </div>
+
+        </footer>
+    </main>
+
+    <script type="module" defer src="./assets/js/register.js"></script>
+</body>
+</html>

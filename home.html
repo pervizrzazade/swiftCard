@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./assets/images/logoTitle.webp" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Css -->
+    <link rel="stylesheet" href="./assets/sass/main.css">
+    <!-- Font Aweasome-->
+    <script src="https://kit.fontawesome.com/57e127926e.js" crossorigin="anonymous"></script>
+    <!-- Font -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <title>SwiftCart</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav__left">
+                <div class="logo"><a href="#"><img src="./assets/images/Logo.webp" alt=""></a></div>
+            </div>
+            <div class="nav__center">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./product.html">Products</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li class="nav__right">
+                        <div class="wishlist__icon">
+                            <i class="fa-solid fa-heart"></i>
+                            <div class="wishlist__counter">
+                                <span class="count">0</span>
+                            </div>
+                        </div>
+                        <div class="shopping__icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="shop__counter">
+                                <span class="count">0</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dashboard__select dropdown">
+                <i class="fa-solid fa-user"></i>
+                <ul class="dashboard__select__items">
+                    <li class="profile">Profile <i class="fa-regular fa-user"></i></a></li>
+                    <li class="log-out"> Log Out <i class="fa-solid fa-power-off"></i></li>
+                </ul>
+            </div>
+
+            <label class="hamburger">
+                <input type="checkbox">
+                <svg viewBox="0 0 32 32">
+                    <path class="line line-top-bottom"
+                        d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                    </path>
+                    <path class="line" d="M7 16 27 16"></path>
+                </svg>
+            </label>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="fav">
+            <ul class="fav__list">
+            </ul>
+            <div class="fav__bottom">
+                <div class="close__btn">
+                    <button>Close</button>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <ul class="card__list">
+            </ul>
+            <div class="card__bottom">
+                <div class="total__price"><span>0</span></div>
+                <div class="close__btn">
+                    <button>Close</button>
+                </div>
+            </div>
+        </section>
+        <section class="home__first__slider">
+            <h2 class="sec-title">Mega Discounted</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                    </svg>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="flash__sales">
+            <div class="flash__sales__title">
+                <h2 class="sec-title">Flash Sales</h2>
+                <div class="flash__timer">
+                    <div class="timer">
+                        <div class="day">
+                            <span class="title">Days</span>
+                            <span id="days"></span>
+                        </div>
+                        <div class="hour">
+                            <span class="title">Hours</span>
+                            <span id="hours"></span>
+                        </div>
+                        <div class="minute">
+                            <span class="title">Minutes</span>
+                            <span id="minutes"></span>
+                        </div>
+                        <div class="second">
+                            <span class="title">Seconds</span>
+                            <span id="seconds"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flash__sales__content">
+                <div class="swiper flashSwiper">
+                    <div class="swiper-wrapper">
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="best__seller">
+            <h2 class="sec-title">Best Selling Products</h2>
+        </section>
+
+        <section class="new__arrial">
+            <h2 class="sec-title">Best Selling Products</h2>
+            <div class="new__arrial__sec">
+
+            </div>
+        </section>
+
+
+        <footer style="position: relative; z-index: 2;">
+            <div class="footer__wrp">
+                <ul class="exclusive">
+                    <li>
+                        <h4>Exclusive</h4>
+                    </li>
+                    <li class="footer__link"><a href="#">Subscribe</a></li>
+                    <li class="footer__link">Get 10% off your first order</li>
+                    <li class="footer__inp"><input type="email" name="" id="" placeholder="Enter your email"> <i
+                            class="fa-solid fa-paper-plane"></i></li>
+                </ul>
+                <ul class="support">
+                    <li>
+                        <h4>Support</h4>
+                    </li>
+                    <li class="footer__link">111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</li>
+                    <li class="footer__link">exclusive@gmail.com</li>
+                    <li class="footer__link">+88015-88888-9999</li>
+                </ul>
+                <ul class="account">
+                    <li>
+                        <h4>Account</h4>
+                    </li>
+                    <li class="footer__link">My Account</li>
+                    <li class="footer__link">Cart</li>
+                    <li class="footer__link">Wishlist</li>
+                    <li class="footer__link">Shop</li>
+                </ul>
+                <ul class="quick__link">
+                    <li>
+                        <h4>Quick Link</h4>
+                    </li>
+                    <li class="footer__link">Privacy Policy</li>
+                    <li class="footer__link">Terms Of Use</li>
+                    <li class="footer__link">FAQ</li>
+                    <li class="footer__link">Contact</li>
+                </ul>
+                <ul class="footer__contact">
+                    <li>
+                        <h4>Download App</h4>
+                    </li>
+                    <li>Save $3 with App New User Only</li>
+                    <li class="download__app">
+                        <img src="./assets/images/qrCode.jpeg" alt="qrCode">
+                        <div class="install__app">
+                            <div class="android">
+                                <img src="./assets/images/playstore.png" alt="">
+                            </div>
+                            <div class="ios">
+                                <img src="./assets/images/appstore.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="links">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="coopyright">
+                <p>&#169; Copyright Rimel 2024. All right reserved</p>
+            </div>
+
+        </footer>
+    </main>
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Local JS -->
+    <script type="module" src="./assets/js/app.js"></script>
+    <script src="./assets/js/home.js"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script type="module" src="./assets/js/firstSliders.js"></script>
+    <script type="module" src="./assets/js/flashSales.js"></script>
+    <script type="module" src="./assets/js/bestSeller.js"></script>
+    <script type="module" src="./assets/js/newArrial.js"></script>
+    <!-- New arrial box vanilla js -->
+
+
+</body>
+
+</html>

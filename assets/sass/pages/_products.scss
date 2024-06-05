@@ -1,0 +1,141 @@
+.loader{
+    text-align: center;
+    font-size: 36px;
+}
+.hide__loader{
+    display: none;
+}
+
+.products{
+    margin:  0px 0 0 0;
+
+    .categories{
+        @include flex(row, start,stretch);
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 40px 20px;
+        @include mobile{
+            justify-content: start;
+        }
+        @include mobile{
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+        }
+        .category__box{
+            border: 1px solid #ccc;
+            padding: 20px 10px;
+            @include flex(column, space-between,center);
+            gap: 20px;
+            width: calc((100% - 60px) / 7);
+            min-width: 165px;
+            cursor: pointer;
+            background-color: #fff;
+            transition: all .3s ease-in-out;
+            border-radius: 5px;
+            
+            &.active{
+                background-color: map-get($colors, second );
+                color: #fff;
+                transition: all .3s ease-in-out;
+
+
+                span>svg,span path{
+                    transition: all .3s ease-in-out;
+                    fill: #fff ;
+                    color: #fff;
+                }
+            }
+            &:hover{
+                background-color: map-get($colors, second );
+                color: #fff;
+                span>svg,span path{
+                    fill: #fff ;
+
+                }
+            }
+            h3{
+                text-align: center;
+                @include font(1.2em, 600)
+            }
+        }
+    }
+
+    .product__wrp{
+
+        .loader{
+            margin: 10px auto;
+        }
+        padding: 10px 20px;
+        @include flex (row, start, stretch);
+        gap: 10px;
+        row-gap: 30px;
+        flex-wrap: wrap;
+        @include mobile{
+            justify-content: center;
+        }
+        .product__box{
+            padding: 8px 15px;
+            width: calc((100% - 40px) / 5);
+            min-width: 200px;
+            @include flex (column, center,center);
+            position: relative;
+            transition: all .3s ease-in-out;
+            border-radius: 5px;
+            &:hover{
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;            }
+            .discount {
+                @include flex(row, center, center);
+                gap: 1px;
+                background-color: map-get($colors, second);
+                padding: 6px;
+                position: absolute;
+                @include font(15px, 500);
+                top: 0;
+                left: 0;
+                cursor: pointer;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 60px;
+                border-bottom-right-radius: 0px;
+                border-bottom-left-radius: 60px;
+                color: #fff
+            }
+
+            .heart {
+                position: absolute;
+                top: 2px;
+                right: 5px;
+                transition: 0.8s all ease;
+                cursor: pointer;
+                font-size: 25px;
+                color: map-get($colors, second);
+            }
+            img{
+                object-fit: contain;
+                max-width: 220px;
+                width: 100%;
+                height: 220px;
+            }
+
+            .product__content{
+                text-align: center;
+                @include flex(column,center,center);
+
+                .prices {
+                    @include flex(row, center, center);
+                    gap: 15px;
+                    @include font (18px, 550);
+                    margin: 15px 0;
+
+                    .first-price {
+                        color: #696969;
+                        text-decoration: line-through;
+                    }
+
+                    .disc-price {
+                        color: map-get($colors , second);
+                    }
+                }
+            }
+        }
+    }
+}
