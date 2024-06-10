@@ -12,7 +12,7 @@ header {
   @include flex(row, space-between, center);
   padding: 15px 60px;
 
-  @include tablet {
+  @include laptop {
     padding: 15px 30px;
   }
 
@@ -27,7 +27,7 @@ header {
         width: 300px;
         transform: matrix3d(360deg);
 
-        @include tablet {
+        @include laptop {
           width: 250px;
         }
 
@@ -210,6 +210,10 @@ header {
   .nav__right {
     @include flex(row, center, center);
     gap: 40px;
+    .fav__cart{
+      @include flex(row, center, center);
+      gap: 30px;
+    }
 
 
 
