@@ -17,13 +17,13 @@
     <header>
         <nav class="navbar">
             <div class="nav__left">
-                <div class="logo"><a href="#"><img src="./assets/images/Logo.webp" alt=""></a></div>
+                <div class="logo"><a href="./index.html"><img src="./assets/images/Logo.webp" alt=""></a></div>
             </div>
             <div class="nav__center">
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./product.html">Products</a></li>
-                    <li><a href="./about.html">About</a></li>
+                    <li class="link"><a href="./index.html">Home</a></li>
+                    <li class="link"><a href="./product.html">Products</a></li>
+                    <li class="link"><a href="./about.html">About</a></li>
                     <li class="nav__right">
                         <div class="wishlist__icon">
                             <i class="fa-solid fa-heart"></i>
@@ -37,19 +37,20 @@
                                 <span class="count">0</span>
                             </div>
                         </div>
+                        <div class="dashboard__select dropdown">
+                            <div class="profile__info">
+                                <i class="fa-solid fa-user"></i>
+                                <h5 class="user__name"></h5>
+                            </div>
+                            <div class="dropdown__items">
+            
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
 
-            <div class="dashboard__select dropdown">
-                <div class="profile__info">
-                    <i class="fa-solid fa-user"></i>
-                    <h5 class="user__name"></h5>
-                </div>
-                <div class="dropdown__items">
-                    
-                </div>
-            </div>
+            
 
             <label class="hamburger">
                 <input type="checkbox">
@@ -66,7 +67,29 @@
 
 
 
+
     <main>
+
+        <section class="fav">
+            <ul class="fav__list">
+            </ul>
+            <div class="fav__bottom">
+                <div class="close__btn">
+                    <button>Close</button>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <ul class="card__list">
+            </ul>
+            <button class="confirm-cart">Confirm</button>
+            <div class="card__bottom">
+                <div class="total__price"><span>0</span></div>
+                <div class="close__btn">
+                    <button>Close</button>
+                </div>
+            </div>
+        </section>
         <section class="register">
             <div class="form">
                 <div class="title">Welcome</div>
@@ -75,11 +98,15 @@
                     <input placeholder="" type="email" required class="input" id="emailLogin">
                     <div class="cut cut-short"></div>
                     <label class="iLabel" for="emailLogin">Email</label>
+                    <span class="emailErr">Enter your email correctly</span>
+
                 </div>
                 <div class="input-container ic2">
                     <input placeholder="" type="password" required class="input" id="passwordLogin">
                     <div class="cut cut-short cut-pass"></div>
                     <label class="iLabel passLabel" for="passwordLogin">Password</label>
+                    <span class="passErr">Enter your passsword correctly</span>
+
                 </div>
                 <button class="submit button" type="submit">Login</button>
                 <div class="create__acc">
@@ -162,7 +189,7 @@
 
     <script type="module" defer src="./assets/js/login.js"></script>
 
-    <!-- <script type="module" src="./assets/js/app.js"></script> -->
+    <script type="module" src="./assets/js/app.js"></script>
 
 </body>
 

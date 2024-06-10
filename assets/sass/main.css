@@ -81,6 +81,10 @@ a {
   background: #b30000;
 }
 
+body {
+  background-color: #f3e4bb;
+}
+
 header {
   transition: all 0.5s ease-in-out;
   background-color: #fff;
@@ -138,19 +142,19 @@ header {
     padding: 5px;
   }
 }
-.navbar .nav__center ul {
+.navbar .nav__center > ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 15px;
 }
-.navbar .nav__center ul li {
+.navbar .nav__center > ul li.link {
   transition: all 0.3s ease-in-out;
   padding: 8px 0;
   position: relative;
 }
-.navbar .nav__center ul li a {
+.navbar .nav__center > ul li.link a {
   display: inline-block;
   color: #000;
   font-size: 20px;
@@ -159,11 +163,11 @@ header {
   transition: all 0.3s ease-in-out;
   white-space: nowrap;
 }
-.navbar .nav__center ul li:hover a {
+.navbar .nav__center > ul li.link:hover a {
   transform: translateY(-4px);
   color: #db4444;
 }
-.navbar .nav__center ul li::after {
+.navbar .nav__center > ul li.link::after {
   content: "";
   width: 0;
   position: absolute;
@@ -173,20 +177,107 @@ header {
   background-color: #db4444;
   transition: all 0.3s ease-in-out;
 }
-.navbar .nav__center ul li:hover::after {
+.navbar .nav__center > ul li.link:hover::after {
   width: 100%;
 }
-.navbar .nav__center ul li.active::after {
+.navbar .nav__center > ul li.link.active::after {
   width: 100%;
 }
-.navbar .nav__center ul li.nav__right:hover::after,
-.navbar .nav__center ul li.active.nav__right::after {
+.navbar .nav__center > ul li.nav__right:hover::after,
+.navbar .nav__center > ul li.active.nav__right::after {
   display: none;
+}
+.navbar .dropdown {
+  cursor: pointer;
+  position: relative;
+}
+.navbar .dropdown .profile__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #2b2a2a;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #333333;
+}
+.navbar .dropdown .profile__info .user__name {
+  text-transform: capitalize;
+  font-size: 25px;
+  border-radius: 4px;
+  padding: 5px;
+  color: #ffffff;
+  background-color: #333333;
+  text-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px;
+}
+.navbar .dropdown .profile__info i {
+  background-color: #db4444;
+  padding: 10px;
+  border-radius: 50%;
+  color: #fff;
+  margin: 0 10px 0 0;
+  font-size: 18px;
+}
+.navbar .dropdown .dropdown__items {
+  display: none;
+  position: absolute;
+  top: 58px;
+  opacity: 0;
+  gap: 10px;
+  width: 108px;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #F5F5F5;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+.navbar .dropdown .dropdown__items > ul {
+  width: 100%;
+}
+.navbar .dropdown .dropdown__items > ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  padding: 0 5px;
+}
+.navbar .dropdown .dropdown__items > ul li:hover {
+  background-color: #ccc;
+}
+.navbar .dropdown .dropdown__items > ul li a {
+  padding: 8px 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: #000;
+}
+.navbar .dropdown .dropdown__items > ul li a i {
+  font-size: 15px;
+}
+.navbar .dropdown .dropdown__items > ul li a .fa-user {
+  color: #5151b9;
+}
+.navbar .dropdown .dropdown__items > ul li a .fa-power-off {
+  color: red;
+}
+.navbar .dropdown.active .dropdown__items {
+  opacity: 1;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  left: 0;
+  justify-content: center;
 }
 .navbar .nav__right {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 40px;
 }
@@ -292,63 +383,6 @@ header {
     color: #000;
     width: 100%;
   }
-}
-
-.dropdown {
-  cursor: pointer;
-  position: relative;
-}
-.dropdown .profile__info {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.dropdown .profile__info i {
-  background-color: #db4444;
-  padding: 10px;
-  border-radius: 50%;
-  color: #fff;
-  margin: 0 10px 0 0;
-}
-.dropdown .dropdown__items {
-  position: absolute;
-  top: 58px;
-  opacity: 0;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  right: -50px;
-  justify-content: space-between;
-  border: 1px solid #ffd000;
-  width: 140px;
-  height: -moz-max-content;
-  height: max-content;
-  background-color: #F5F5F5;
-  border-radius: 5px;
-  transition: all 0.5s ease;
-}
-.dropdown .dropdown__items li {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.3s ease-in-out;
-  padding: 8px 6px;
-}
-.dropdown .dropdown__items li:hover {
-  background-color: #ccc;
-}
-.dropdown .dropdown__items li i {
-  margin: 0 8px 0 0;
-}
-.dropdown.active .dropdown__items {
-  opacity: 1;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  right: -50px;
-  justify-content: space-between;
 }
 
 .sec-title {
@@ -532,7 +566,7 @@ header {
 
 .home__first__slider .swiper {
   width: 100%;
-  padding: 50px 0px;
+  padding: 100px 0px;
   background-color: rgba(0, 0, 0, 0.8470588235);
 }
 .home__first__slider .swiper .swiper-pagination {
@@ -1384,7 +1418,6 @@ body.activeFav .fav {
   position: relative;
   margin: 30px;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
   border-radius: 8px;
   background-color: #ffffff;
   display: flex;
@@ -1393,6 +1426,9 @@ body.activeFav .fav {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   text-align: center;
+}
+.new__arrial .new__arrial__sec .new__arrial__wrp .new__arrial__box:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
 }
 .new__arrial .new__arrial__sec .new__arrial__wrp .new__arrial__box .new__arrial__content {
   padding: 20px;
@@ -1653,7 +1689,7 @@ footer a {
   margin-top: 40px;
 }
 .register .ic2 {
-  margin-top: 30px;
+  margin-top: 45px;
 }
 .register .input {
   background-color: #303245;
@@ -1666,6 +1702,21 @@ footer a {
   outline: 0;
   padding: 4px 20px 0;
   width: 100%;
+}
+.register .nameErr,
+.register .emailErr,
+.register .passErr {
+  padding: 4px 0 0 0;
+  display: inline-block;
+  color: red;
+  letter-spacing: 1.5px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.register .nameErr.active,
+.register .emailErr.active,
+.register .passErr.active {
+  opacity: 1;
 }
 .register .cut {
   background-color: #15172b;
@@ -2071,4 +2122,89 @@ footer a {
   pad: 0.7em 0;
   font-weight: 400;
   line-height: 0;
+}
+
+main {
+  background-color: #f3e4bb;
+}
+
+.accaunt-details {
+  padding: 60px 30px 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.accaunt-details .accaunt__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 15px;
+}
+.accaunt-details .accaunt__info h3 {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: normal;
+  color: #db4444;
+  text-align: center;
+  width: 100%;
+}
+.accaunt-details .accaunt__info > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 5px;
+  border: 1px solid #ccc;
+  padding: 15px 10px;
+  width: 100%;
+  background-color: #ccc;
+  border-radius: 4px;
+}
+.accaunt-details .accaunt__info > div label {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+.accaunt-details .accaunt__info > div input {
+  border: 1px solid #696969;
+  border-radius: 4px;
+  padding: 12px 5px;
+  outline: none;
+  font-size: 18px;
+  background-color: #ccc;
+  color: #505050;
+}
+.accaunt-details .accaunt__info > div .nameErr, .accaunt-details .accaunt__info > div .emailErr, .accaunt-details .accaunt__info > div .passErr {
+  color: red;
+  letter-spacing: 1.5px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.accaunt-details .accaunt__info > div .nameErr.active, .accaunt-details .accaunt__info > div .emailErr.active, .accaunt-details .accaunt__info > div .passErr.active {
+  opacity: 1;
+}
+.accaunt-details .accaunt__info > div input.err {
+  border: 1px solid red;
+}
+.accaunt-details .accaunt__info .accaunt__update {
+  border: none;
+  align-items: center;
+  background-color: transparent;
+}
+.accaunt-details .accaunt__info .accaunt__update button {
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  cursor: pointer;
+  background-color: #000;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+.accaunt-details .accaunt__info .accaunt__update button:hover {
+  border: 2px solid #db4444;
 }/*# sourceMappingURL=main.css.map */

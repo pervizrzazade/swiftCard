@@ -12,12 +12,12 @@ const dropdownItems = document.querySelector(".dropdown__items");
 let logOut = null;
 const userNameDisplay = document.querySelector(".user__name");
 const registered = `<ul class="registered">
-    <li class="profile">Profile <i class="fa-regular fa-user"></i></a></li>
-    <li class="log-out"> Log Out <i class="fa-solid fa-power-off"></i></li>
+    <li class="profile"><a href="./profile.html">Profile <i class="fa-regular fa-user"></i></a></li>
+    <li class="log-out"> <a>Log Out <i class="fa-solid fa-power-off"></i></a></li>
     </ul>`;
 const guest = ` <ul class="guest">
-    <li><a href="./login.html">Login</a></li>
-    <li><a href="./signup.html">Register</a></li>
+    <li><a href="./login.html">Login <i class="fa-solid fa-right-to-bracket"></i></a></li>
+    <li><a href="./signup.html">Register <i class="fa-regular fa-address-card"></i></a></li>
     </ul>`;
 //***** */
 const cardClose = document.querySelectorAll(".close__btn");
@@ -33,29 +33,29 @@ let wishlistItem =
     ? JSON.parse(localStorage.wishlistData)
     : [];
 
-
 //User tools functions
 
 setUserDropdowTools();
 function setUserDropdowTools() {
   let auth = Boolean(localStorage.userName);
-  dropdownItems.innerHTML = auth ? registered : guest ;
+  dropdownItems.innerHTML = auth ? registered : guest;
   logOut = auth ? document.querySelector(".log-out") : null;
-  if(auth) logOut.onclick = setLogoutHandler;
+  if (auth) logOut.onclick = setLogoutHandler;
   userNameDisplay.textContent = auth ? localStorage.userName : "Guest";
 }
 
 dropDown.addEventListener("click", () => {
+  dropdownItems.classList.toggle("active");
   dropDown.classList.toggle("active");
+  body.classList.remove("activeCard");
+  body.classList.remove("activeFav");
 });
 
-
 function setLogoutHandler() {
-  localStorage.removeItem('userName');
+  localStorage.removeItem("userName");
   setUserDropdowTools();
-  console.log("log out");
+  window.location.pathname = "index.html"
 }
-
 
 //User tools functions -END-
 
@@ -73,10 +73,12 @@ getData();
 shopIcon.addEventListener("click", () => {
   body.classList.toggle("activeCard");
   body.classList.remove("activeFav");
+  dropDown.classList.remove("active");
 });
 wishlistIcon.addEventListener("click", () => {
   body.classList.remove("activeCard");
   body.classList.toggle("activeFav");
+  dropDown.classList.remove("active");
 });
 
 hamburgerMenu.addEventListener("click", () => {
@@ -90,17 +92,17 @@ cardClose.forEach((btn) => {
   });
 });
 
-
 confirmCart?.addEventListener("click", () => {
   let checkUser = localStorage.getItem("userName");
   console.log(checkUser);
-  if (checkUser) {
+  if (checkUser == null) {
     window.location.pathname = "/signup.html";
   } else {
     alert("Your cart has been confirmed");
   }
 });
 
+// Add to cart
 export function setAddToCartHandler() {
   addToCard = document.querySelectorAll(".CartBtn");
   addToCard.forEach((btn) => {
@@ -186,8 +188,6 @@ function checkDoubleItem(selectData) {
 export function discountCalc(discount, price) {
   return parseInt(price - (price * discount) / 100);
 }
-
-
 
 function showCardItems(cartItems) {
   cardList.innerHTML = cartItems.length
@@ -331,3 +331,5 @@ function checkItemsState() {
     } else elem.checked = false;
   });
 }
+
+

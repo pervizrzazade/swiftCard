@@ -8,7 +8,6 @@
     border-radius: 20px;
     box-sizing: border-box;
     padding: 20px;
-
     width: 320px;
   }
 
@@ -40,7 +39,7 @@
   }
 
   .ic2 {
-    margin-top: 30px;
+    margin-top: 45px;
   }
 
 
@@ -55,6 +54,23 @@
     outline: 0;
     padding: 4px 20px 0;
     width: 100%;
+  }
+
+  .nameErr,
+  .emailErr,
+  .passErr {
+    padding: 4px 0 0 0;
+    display: inline-block;
+    color: red;
+    letter-spacing: 1.5px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+  }
+
+  .nameErr.active,
+  .emailErr.active,
+  .passErr.active {
+    opacity: 1;
   }
 
   .cut {
@@ -136,8 +152,8 @@
     text-align: center;
     color: #fff;
   }
-  .input.err{
+
+  .input.err {
     border: 1px solid red;
   }
 }
-

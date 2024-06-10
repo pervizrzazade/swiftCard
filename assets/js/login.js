@@ -12,10 +12,16 @@ let valueEmail = "";
 
 emailLogin.addEventListener("input", () => {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let errorText = document.querySelector(".emailErr");
+
   if (regex.test(valueEmail)) {
     emailLogin.classList.remove("err");
+    errorText.classList.remove("active");
+
   } else {
     emailLogin.classList.add("err");
+    errorText.classList.add("active");
+
   }
   valueEmail = emailLogin.value;
   valueEmail
@@ -25,10 +31,14 @@ emailLogin.addEventListener("input", () => {
 
 let valuePass = "";
 passwordLogin.addEventListener("input", () => {
+  let errorText = document.querySelector(".passErr");
   if (passwordLogin.value.length > 7) {
     passwordLogin.classList.remove("err");
+    errorText.classList.remove("active");
   } else {
     passwordLogin.classList.add("err");
+    errorText.classList.add("active");
+
   }
   valuePass = passwordLogin.value;
   valuePass

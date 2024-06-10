@@ -20,13 +20,13 @@
     <header>
         <nav class="navbar">
             <div class="nav__left">
-                <div class="logo"><a href="#"><img src="./assets/images/Logo.webp" alt=""></a></div>
+                <div class="logo"><a href="./index.html"><img src="./assets/images/Logo.webp" alt=""></a></div>
             </div>
             <div class="nav__center">
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./product.html">Products</a></li>
-                    <li><a href="./about.html">About</a></li>
+                    <li class="link"><a href="./index.html">Home</a></li>
+                    <li class="link active"><a href="./product.html">Products</a></li>
+                    <li class="link"><a href="./about.html">About</a></li>
                     <li class="nav__right">
                         <div class="wishlist__icon">
                             <i class="fa-solid fa-heart"></i>
@@ -40,19 +40,20 @@
                                 <span class="count">0</span>
                             </div>
                         </div>
+                        <div class="dashboard__select dropdown">
+                            <div class="profile__info">
+                                <i class="fa-solid fa-user"></i>
+                                <h5 class="user__name"></h5>
+                            </div>
+                            <div class="dropdown__items">
+            
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
 
-            <div class="dashboard__select dropdown">
-                <div class="profile__info">
-                    <i class="fa-solid fa-user"></i>
-                    <h5 class="user__name"></h5>
-                </div>
-                <div class="dropdown__items">
-                    
-                </div>
-            </div>
+            
 
             <label class="hamburger">
                 <input type="checkbox">
@@ -65,6 +66,7 @@
             </label>
         </nav>
     </header>
+
 
 
     <main>

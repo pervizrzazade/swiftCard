@@ -11,10 +11,15 @@ hamburgerMenu.addEventListener("click", () => {
 
 let valueName = "";
 nameRegister.addEventListener("input", () => {
+  let errorText = document.querySelector(".nameErr");
   if (nameRegister.value.length > 2) {
     nameRegister.classList.remove("err");
+    errorText.classList.remove("active");
+
   } else {
     nameRegister.classList.add("err");
+    errorText.classList.add("active");
+
   }
   valueName = nameRegister.value;
   valueName
@@ -25,10 +30,13 @@ nameRegister.addEventListener("input", () => {
 let valueEmail = "";
 emailRegister.addEventListener("input", () => {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let errorText = document.querySelector(".emailErr");
   if (regex.test(valueEmail)) {
     emailRegister.classList.remove("err");
+    errorText.classList.remove("active");
   } else {
     emailRegister.classList.add("err");
+    errorText.classList.add("active");
   }
   valueEmail = emailRegister.value;
   valueEmail
@@ -38,10 +46,13 @@ emailRegister.addEventListener("input", () => {
 
 let valuePass = "";
 passwordRegister.addEventListener("input", () => {
+  let errorText = document.querySelector(".passErr");
   if (passwordRegister.value.length > 7) {
     passwordRegister.classList.remove("err");
+    errorText.classList.remove("active");
   } else {
     passwordRegister.classList.add("err");
+    errorText.classList.add("active");
   }
   valuePass = passwordRegister.value;
   valuePass
