@@ -7,14 +7,36 @@ main{
     @include flex (column,center,center);
 
     .accaunt__info{
+        position: relative;
         @include flex (column,center,start);
         gap: 15px;
 
         h3{
             @include font(40px, 600);
             color: map-get($colors,second );
-            text-align: center;
+            text-align: start;
             width: 100%;
+        }
+        .delete{
+            background-color:#ccc;
+            padding: 8px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: all .5s ease-in-out;
+            &:hover{
+                background-color: #696969;
+                i{
+                    color: #fff;
+                }
+            }
+            i{
+                transition: all .5s ease-in-out;
+                color: map-get($colors, second );
+            }
+
         }
         &>div{
             @include flex(column,center,start);

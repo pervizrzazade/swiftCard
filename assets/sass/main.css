@@ -808,10 +808,12 @@ header {
   letter-spacing: normal;
 }
 .flash__sales .swiper {
+  margin: 50px 0 0 0;
   width: 100%;
   height: 500px;
   padding-top: 50px;
   padding-bottom: 50px;
+  background-color: #fff;
 }
 .flash__sales .swiper-slide {
   background-position: center;
@@ -2142,6 +2144,7 @@ main {
   align-items: center;
 }
 .accaunt-details .accaunt__info {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2153,8 +2156,28 @@ main {
   font-weight: 600;
   letter-spacing: normal;
   color: #db4444;
-  text-align: center;
+  text-align: start;
   width: 100%;
+}
+.accaunt-details .accaunt__info .delete {
+  background-color: #ccc;
+  padding: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+}
+.accaunt-details .accaunt__info .delete:hover {
+  background-color: #696969;
+}
+.accaunt-details .accaunt__info .delete:hover i {
+  color: #fff;
+}
+.accaunt-details .accaunt__info .delete i {
+  transition: all 0.5s ease-in-out;
+  color: #db4444;
 }
 .accaunt-details .accaunt__info > div {
   display: flex;

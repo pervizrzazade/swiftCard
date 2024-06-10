@@ -44,7 +44,6 @@ function setUserData(userInfo) {
       passInp.classList.add("err");
       errorText.classList.add("active");
     }
-
   };
   accountDetail.innerHTML = userInfo
     .map((user) => {
@@ -52,6 +51,7 @@ function setUserData(userInfo) {
         return `
         <div class="accaunt__info">
                 <h3>Account info</h3>
+                <span class='delete' onclick="deleteUser(${user.id})"><i class="fa-solid fa-user-minus"></i></span> 
                 <div class="name__info">
                     <label for="name">Name</label>
                     <input type="text" oninput="validationName()" id="name" value="${user.name}">
@@ -77,7 +77,8 @@ function setUserData(userInfo) {
     })
     .join("");
 }
-async function updateUserData(id) {
+
+ function updateUserData(id) {
   let userName = document.getElementById("name");
   let userEmail = document.getElementById("email");
   let userPass = document.getElementById("password");
@@ -87,8 +88,6 @@ async function updateUserData(id) {
     email: userEmail.value,
     pass: userPass.value,
   };
-
-  console.log(userData);
 
   fetch(`https://66604a0e5425580055b32ea2.mockapi.io/users//${id}`, {
     method: "PUT",
@@ -128,4 +127,19 @@ async function updateUserData(id) {
     .catch((error) => {
       console.error("Error:", error);
     });
+
+
+}
+
+
+function deleteUser (id){
+  fetch(`https://66604a0e5425580055b32ea2.mockapi.io/users//${id}`, {
+    method: 'DELETE'
+  }).then(() => {
+     alert('Removed account');
+     localStorage.removeItem("userName")
+     window.location.pathname= '/index.html'
+  }).catch(err => {
+    console.error(err)
+  })
 }

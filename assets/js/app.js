@@ -54,7 +54,7 @@ dropDown.addEventListener("click", () => {
 function setLogoutHandler() {
   localStorage.removeItem("userName");
   setUserDropdowTools();
-  window.location.pathname = "index.html"
+  window.location.pathname = "index.html";
 }
 
 //User tools functions -END-
@@ -70,16 +70,22 @@ export const getData = async () => {
 };
 getData();
 
+// ShopIcon click event start
 shopIcon.addEventListener("click", () => {
   body.classList.toggle("activeCard");
   body.classList.remove("activeFav");
   dropDown.classList.remove("active");
 });
+// ShopIcon click event end
+
+// wishlistIcon click event start
+
 wishlistIcon.addEventListener("click", () => {
   body.classList.remove("activeCard");
   body.classList.toggle("activeFav");
   dropDown.classList.remove("active");
 });
+// wishlistIcon click event end
 
 hamburgerMenu.addEventListener("click", () => {
   body.classList.toggle("activeBurger");
@@ -92,6 +98,7 @@ cardClose.forEach((btn) => {
   });
 });
 
+//  Cart confirm ? user login start
 confirmCart?.addEventListener("click", () => {
   let checkUser = localStorage.getItem("userName");
   console.log(checkUser);
@@ -101,8 +108,10 @@ confirmCart?.addEventListener("click", () => {
     alert("Your cart has been confirmed");
   }
 });
+//  Cart confirm ? user login end
 
-// Add to cart
+
+// Add to cart start
 export function setAddToCartHandler() {
   addToCard = document.querySelectorAll(".CartBtn");
   addToCard.forEach((btn) => {
@@ -132,7 +141,9 @@ export function setAddToCartHandler() {
 
   checkItemsState();
 }
+//  Add to cart end
 
+// Add to wishlist start
 export function addToWishListHandler() {
   addToWishlist = document.querySelectorAll(".heart input");
 
@@ -162,7 +173,10 @@ export function addToWishListHandler() {
     };
   });
 }
+// Add to wishlist end
 
+
+// Double add to wishlist icon click start
 function checkWishlist(selectData) {
   let double = false;
   wishlistItem = wishlistItem.filter((item) => {
@@ -172,6 +186,10 @@ function checkWishlist(selectData) {
   });
   !double && wishlistItem.push(selectData);
 }
+
+// Double add to wishlist icon click end
+
+// Double add to cart icon click start
 
 function checkDoubleItem(selectData) {
   let double = false;
@@ -184,11 +202,17 @@ function checkDoubleItem(selectData) {
   });
   !double && cartItems.push(selectData);
 }
+// Double add to cart icon click end
 
+
+// Discount calc start
 export function discountCalc(discount, price) {
   return parseInt(price - (price * discount) / 100);
 }
+// Discount calc end
 
+
+// Show cart items start
 function showCardItems(cartItems) {
   cardList.innerHTML = cartItems.length
     ? cartItems
@@ -253,6 +277,9 @@ function showCardItems(cartItems) {
       .toLocaleString("az-AZ") +
     "₼";
 }
+
+// Show cart items end
+
 
 function changePriceHandler(quantity, index) {
   cartItems[index].quantity = quantity;
@@ -331,5 +358,3 @@ function checkItemsState() {
     } else elem.checked = false;
   });
 }
-
-

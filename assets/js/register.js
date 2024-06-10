@@ -1,5 +1,4 @@
 const hamburgerMenu = document.querySelector(".hamburger input");
-
 const nameRegister = document.getElementById("registerName");
 const emailRegister = document.getElementById("registerEmail");
 const passwordRegister = document.getElementById("registerPassword");
