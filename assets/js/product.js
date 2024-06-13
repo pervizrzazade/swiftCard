@@ -27,7 +27,7 @@ setTimeout(() => {
     addToWishListHandler();
     setAddToCartHandler();
   });
-}, 5000);
+}, 2000);
 
 categories.forEach((button) => {
   let dataName = button.getAttribute("data-name");

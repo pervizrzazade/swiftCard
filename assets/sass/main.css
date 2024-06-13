@@ -1935,6 +1935,7 @@ footer a {
   position: relative;
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
+  background-color: #fff;
 }
 .products .product__wrp .product__box:hover {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -2151,7 +2152,14 @@ main {
   align-items: start;
   gap: 15px;
 }
-.accaunt-details .accaunt__info h3 {
+.accaunt-details .accaunt__info .accaunt__info__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0 auto;
+}
+.accaunt-details .accaunt__info .accaunt__info__top h3 {
   font-size: 40px;
   font-weight: 600;
   letter-spacing: normal;
@@ -2159,23 +2167,23 @@ main {
   text-align: start;
   width: 100%;
 }
-.accaunt-details .accaunt__info .delete {
+.accaunt-details .accaunt__info .accaunt__info__top .delete {
   background-color: #ccc;
+  border: 1px solid #fff;
   padding: 8px;
-  position: absolute;
-  top: 0;
-  right: 0;
   cursor: pointer;
   border-radius: 3px;
   transition: all 0.5s ease-in-out;
 }
-.accaunt-details .accaunt__info .delete:hover {
+.accaunt-details .accaunt__info .accaunt__info__top .delete:hover {
   background-color: #696969;
-}
-.accaunt-details .accaunt__info .delete:hover i {
   color: #fff;
 }
-.accaunt-details .accaunt__info .delete i {
+.accaunt-details .accaunt__info .accaunt__info__top .delete:hover i {
+  color: #fff;
+}
+.accaunt-details .accaunt__info .accaunt__info__top .delete i {
+  margin: 0 0 0 10px;
   transition: all 0.5s ease-in-out;
   color: #db4444;
 }
@@ -2204,13 +2212,17 @@ main {
   background-color: #ccc;
   color: #505050;
 }
-.accaunt-details .accaunt__info > div .nameErr, .accaunt-details .accaunt__info > div .emailErr, .accaunt-details .accaunt__info > div .passErr {
+.accaunt-details .accaunt__info > div .nameErr,
+.accaunt-details .accaunt__info > div .emailErr,
+.accaunt-details .accaunt__info > div .passErr {
   color: red;
   letter-spacing: 1.5px;
   opacity: 0;
   transition: all 0.2s ease-in-out;
 }
-.accaunt-details .accaunt__info > div .nameErr.active, .accaunt-details .accaunt__info > div .emailErr.active, .accaunt-details .accaunt__info > div .passErr.active {
+.accaunt-details .accaunt__info > div .nameErr.active,
+.accaunt-details .accaunt__info > div .emailErr.active,
+.accaunt-details .accaunt__info > div .passErr.active {
   opacity: 1;
 }
 .accaunt-details .accaunt__info > div input.err {

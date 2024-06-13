@@ -50,8 +50,10 @@ function setUserData(userInfo) {
       if (name == user.name) {
         return `
         <div class="accaunt__info">
-                <h3>Account info</h3>
-                <span class='delete' onclick="deleteUser(${user.id})"><i class="fa-solid fa-user-minus"></i></span> 
+                <div class="accaunt__info__top">
+                  <h3>Account info</h3>
+                  <span class='delete' onclick="deleteUser(${user.id})"> Delete account<i class="fa-solid fa-user-minus"></i></span> 
+                </div>
                 <div class="name__info">
                     <label for="name">Name</label>
                     <input type="text" oninput="validationName()" id="name" value="${user.name}">
@@ -114,7 +116,7 @@ function setUserData(userInfo) {
                 </div>
                 <div class="pass__info">
                     <label for="password">Password</label>
-                    <input type="password" name="" id="password" value="${data.pass}">
+                    <input type="password" name="" id="password"}">
                 </div>
                 <div class="accaunt__update">
                     <button class="update" onclick="updateUserData(${data.id})">Update</button>

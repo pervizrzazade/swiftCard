@@ -1,45 +1,56 @@
-main{
+main {
 
     background-color: #f3e4bb;
 }
-.accaunt-details{
-    padding: 60px 30px 0 30px;
-    @include flex (column,center,center);
 
-    .accaunt__info{
+.accaunt-details {
+    padding: 60px 30px 0 30px;
+    @include flex (column, center, center);
+
+    .accaunt__info {
         position: relative;
-        @include flex (column,center,start);
+        @include flex (column, center, start);
         gap: 15px;
 
-        h3{
-            @include font(40px, 600);
-            color: map-get($colors,second );
-            text-align: start;
-            width: 100%;
-        }
-        .delete{
-            background-color:#ccc;
-            padding: 8px;
-            position: absolute;
-            top: 0;
-            right: 0;
-            cursor: pointer;
-            border-radius: 3px;
-            transition: all .5s ease-in-out;
-            &:hover{
-                background-color: #696969;
-                i{
-                    color: #fff;
-                }
-            }
-            i{
-                transition: all .5s ease-in-out;
-                color: map-get($colors, second );
+        .accaunt__info__top {
+            @include flex (column, center, start);
+            margin: 0 auto;
+            h3 {
+                @include font(40px, 600);
+                color: map-get($colors, second);
+                text-align: start;
+                width: 100%;
             }
 
+            .delete {
+                background-color: #ccc;
+                border: 1px solid #fff;
+                padding: 8px;
+                cursor: pointer;
+                border-radius: 3px;
+                transition: all .5s ease-in-out;
+
+                &:hover {
+                    background-color: #696969;
+                    color: #fff;
+                    i {
+                        color: #fff;
+                    }
+                }
+
+                i {
+                    margin: 0 0 0 10px;
+                    transition: all .5s ease-in-out;
+                    color: map-get($colors, second);
+                }
+
+            }
+
+
         }
-        &>div{
-            @include flex(column,center,start);
+
+        &>div {
+            @include flex(column, center, start);
             gap: 5px;
             border: 1px solid #ccc;
             padding: 15px 10px;
@@ -47,12 +58,12 @@ main{
             background-color: #ccc;
             border-radius: 4px;
 
-            label{
+            label {
                 font-size: 20px;
                 margin: 0 0 10px 0;
             }
 
-            input{
+            input {
                 border: 1px solid #696969;
                 border-radius: 4px;
                 padding: 12px 5px;
@@ -61,38 +72,47 @@ main{
                 background-color: #ccc;
                 color: #505050;
             }
-            .nameErr,.emailErr,.passErr{
+
+            .nameErr,
+            .emailErr,
+            .passErr {
                 color: red;
                 letter-spacing: 1.5px;
                 opacity: 0;
                 transition: all .2s ease-in-out;
             }
-            .nameErr.active,.emailErr.active, .passErr.active{
+
+            .nameErr.active,
+            .emailErr.active,
+            .passErr.active {
                 opacity: 1;
             }
-            input.err{
+
+            input.err {
                 border: 1px solid red;
             }
         }
 
-        .accaunt__update{
+        .accaunt__update {
             border: none;
             align-items: center;
             background-color: transparent;
-            button{
+
+            button {
                 width: 100%;
                 padding: 15px 0;
                 border: none;
                 cursor: pointer;
-                background-color: map-get($colors,first );
+                background-color: map-get($colors, first);
                 border-radius: 5px;
                 color: #fff;
                 font-size: 20px;
                 letter-spacing: 1.2px;
                 transition: all .3s ease-in-out;
                 border: 2px solid transparent;
-                &:hover{
-                    border: 2px solid map-get($colors,second )
+
+                &:hover {
+                    border: 2px solid map-get($colors, second)
                 }
 
 
@@ -100,6 +120,6 @@ main{
         }
 
 
-       
+
     }
 }
