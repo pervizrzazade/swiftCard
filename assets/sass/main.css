@@ -118,7 +118,10 @@ header {
 }
 .navbar .nav__left .logo img {
   width: 300px;
-  transform: matrix3d(360deg);
+  transition: all 0.5s ease-in-out;
+}
+.navbar .nav__left .logo img:hover {
+  transform: scale(0.9);
 }
 @media screen and (max-width: 992px) {
   .navbar .nav__left .logo img {
@@ -374,10 +377,12 @@ header {
   }
   body.activeBurger .nav__center {
     right: 0;
-    background: #fff;
+    width: 100%;
+    height: 100vh;
   }
   body.activeBurger .nav__center ul {
-    background-color: #fff;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
     width: 100%;
     height: 100%;
     gap: 5px;
